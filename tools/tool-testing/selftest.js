@@ -650,6 +650,8 @@ _.extend(Sandbox.prototype, {
       upgradersFile.appendUpgraders(upgraders.allUpgraders());
     }
 
+    require("../cli/commands.js").installDefaultNpmDeps(absoluteTo);
+
     if (options.dontPrepareApp) {
       return;
     }
